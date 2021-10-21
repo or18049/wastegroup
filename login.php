@@ -10,18 +10,22 @@
    session_start();
    $_SESSION["id"] = $_POST["id"];
    $_SESSION["pass"] = $_POST["pass"];
+   if($_SESSION["miss"]){
+       print '<h2>ログイン情報が間違っています</h2>';
+       $_SESSION["miss"] = false;
+   }
    if(isset($_POST['check'])){
     if((empty($_SESSION["id"])) || (empty($_SESSION["pass"]))){
-        header("location: top.php");
+        header("location: login.php");
         $_SESSION["miss"] = true;
     }
 
     if(preg_match("/<(\"[^\"]*\"|'[^']*'|[^'\">])*>/", $_POST["id"])){
-        header("location: top.php");
+        header("location: login.php");
         $_SESSION["miss"] = true;
     }
     if(preg_match("/<(\"[^\"]*\"|'[^']*'|[^'\">])*>/", $_POST["pass"])){
-        header("location: top.php");
+        header("location: login.php");
         $_SESSION["miss"] = true;
     }
     if(($_SESSION["id"] == "or18049") && ($_SESSION["pass"] == "abc")){
@@ -37,6 +41,6 @@
    <button type=submit name=check>ログイン</button>
  </form>
  <hr>
- <a href=top.php>トップページへ<br>
+ <a href=index.php>トップページへ<br>
  </body>
 </html>
