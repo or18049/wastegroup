@@ -10,6 +10,7 @@
    session_start();
    $_SESSION["id"] = $_POST["id"];
    $_SESSION["pass"] = $_POST["pass"];
+   
    if($_SESSION["miss"]){
        print '<h2>ログイン情報が間違っています</h2>';
        $_SESSION["miss"] = false;
