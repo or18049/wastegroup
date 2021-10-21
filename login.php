@@ -34,7 +34,7 @@
    <input type=text name=id size=5>
    <input type=text name=pass size=5>
    <br>
-   <button type=submit name=check>ログイン</botton>
+   <button type=submit name=check>ログイン</button>
  </form>
  <hr>
  <a href=top.php>トップページへ<br>
