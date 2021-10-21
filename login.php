@@ -29,7 +29,7 @@
         $_SESSION["miss"] = true;
     }
     if(($_SESSION["id"] == "or18049") && ($_SESSION["pass"] == "abc")){
-        header("location: manage_top.php");
+        header("location: manager_top.php");
         $_SESSION["manage"] = true;
     }
    }
