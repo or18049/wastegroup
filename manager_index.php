@@ -5,7 +5,8 @@
   <title>ログイン</title>
  </head>
  <body>
-    これは管理トップページだよ
-    <a href=login.php>ログインページ<br>
+    <h1>管理者用ゴミ分類検索ページ</h1><br>
+    ゴミの分別の検索は<a href=search.php>こちら</a><br>
+    新規分別情報の追加は<a href=add_form.html>こちら
 </body>
 </html>
