@@ -37,13 +37,13 @@
     }
    }
    ?>
-   ID:           パスワード:
   <form action=login.php method=POST>
    <input type=text name=id size=5><br>
    <input type=text name=pass size=5>
    <br>
    <button type=submit name=check>ログイン</button>
  </form>
+ み
  <hr>
  <a href=index.php>トップページへ<br>
  </body>
