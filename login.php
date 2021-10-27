@@ -8,12 +8,14 @@
   <h1>ログイン情報を入力してください</h1>
   <?php
    session_start();
-   $_SESSION["id"] = $_POST["id"];
-   $_SESSION["pass"] = $_POST["pass"];
-   
-   if($_SESSION["miss"]){
-       print '<h2>ログイン情報が間違っています</h2>';
-       $_SESSION["miss"] = false;
+   if(isset($_POST["id"]) && isset($_POST["pass"])){
+    $_SESSION["id"] = $_POST["id"];
+    $_SESSION["pass"] = $_POST["pass"];
+    
+    if($_SESSION["miss"]){
+        print '<h2>ログイン情報が間違っています</h2>';
+        $_SESSION["miss"] = false;
+    }
    }
    if(isset($_POST['check'])){
     if((empty($_SESSION["id"])) || (empty($_SESSION["pass"]))){
@@ -36,7 +38,9 @@
    }
    ?>
   <form action=login.php method=POST>
-   <input type=text name=id size=5>
+    ID:
+   <input type=text name=id size=5><br>
+    パスワード:
    <input type=text name=pass size=5>
    <br>
    <button type=submit name=check>ログイン</button>
