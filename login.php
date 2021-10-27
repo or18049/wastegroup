@@ -37,10 +37,9 @@
     }
    }
    ?>
+   ID:           パスワード:
   <form action=login.php method=POST>
-    ID:
    <input type=text name=id size=5><br>
-    パスワード:
    <input type=text name=pass size=5>
    <br>
    <button type=submit name=check>ログイン</button>
